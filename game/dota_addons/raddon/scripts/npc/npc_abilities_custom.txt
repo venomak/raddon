@@ -220,8 +220,8 @@
 	    
 	    "precache"
 	    {
-	      "particle"          "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
-	      "soundfile"         "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts"
+	        "particle"          "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 	    }
 	
 	    // Item Info
@@ -236,9 +236,39 @@
 	      //   "Target"    "CASTER"
 	      //   "ModifierName"  "modifier_channel_start"
 	      // }
-	      // "FireSound"
+	      "FireSound"
+	      {
+	        "EffectName"    "Hero_DragonKnight.BreathFire"
+	        "Target"      "CASTER"
+	      }
+	
+	      "LinearProjectile"
+	        {
+	            "Target"      "POINT"
+	            "EffectName"  "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	            "MoveSpeed"   "1100"
+	            "StartRadius"   "125"
+	            "StartPosition" "attach_origin"
+	            "EndRadius"     "125"
+	            "FixedDistance" "1000"
+	            "TargetTeams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	            "TargetTypes"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	            "TargetFlags"   "DOTA_UNIT_TARGET_FLAG_NONE"
+	            "HasFrontalCone"    "1"
+	            "ProvidesVision" "0"
+	            
+	        }
+	
+	      // "FireEffect"
 	      // {
-	      //   "EffectName"    "Hero_Gyrocopter.CallDown.Fire"
+	      //   "EffectName"      "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	      //   "EffectAttachType"    "attach_hitloc"
+	      //   "EffectRadius"      "%radius"
+	      //   "Duration"          "%duration"
+	      //   // "EffectDurationScale" "1"
+	      //   // "EffectLifeDurationScale" "%duration"
+	      //   "EffectColorA"      "255 0 0"
+	      //   "EffectColorB"      "255 0 0"
 	      //   "Target"      "CASTER"
 	      // }
 	    }
@@ -344,6 +374,18 @@
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilitySpecial"
 	    {
+	        "01"
+	        {
+	            "var_type"      "FIELD_INTEGER"
+	            "radius"        "550 550 600 650"
+	        }
+	
+	        "02"
+	        {
+	            "var_type"      "FIELD_FLOAT"
+	            "duration"      "0.5"
+	        }
+	
 	      // "01"
 	      // {
 	      //   "var_type"        "FIELD_FLOAT"
@@ -385,17 +427,17 @@
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilityCastRange"        "1000"
-	    "AbilityCastPoint"        "0.0"
-	    "AbilityCooldown"       "10.0"
-	    "AbilityChannelTime"      "2.0 1.8 1.6 1.5"
+	    "AbilityCastPoint"        "0.5"
+	    "AbilityCooldown"       "1.0"
+	    "AbilityChannelTime"      "0.0 0.0 0.0 0.0"
 	    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 	    "AbilityCastAnimation"      "life_stealer_rage"
 	    "AbilityDamage"         "400 600 800 1000"
 	    
 	    "precache"
 	    {
-	      "particle"          "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
-	      "soundfile"         "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts"
+	      "particle"          "particles\units\heroes\hero_queenofpain\queen_scream_of_pain.vpcf"
+	      //"soundfile"         "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 	    }
 	
 	    // Item Info
@@ -412,10 +454,30 @@
 	      // }
 	      // "FireSound"
 	      // {
-	      //   "EffectName"    "Hero_Gyrocopter.CallDown.Fire"
+	      //   "EffectName"    "Hero_DragonKnight.BreathFire"
 	      //   "Target"      "CASTER"
 	      // }
+	
+	
+	      "LinearProjectile"
+	        {
+	            "Target"      "POINT"
+	            "EffectName"  "particles\units\heroes\hero_queenofpain\queen_scream_of_pain.vpcf"
+	            "MoveSpeed"   "1500"
+	            "StartRadius"   "750"
+	            "StartPosition" "attach_attack1"
+	            "EndRadius"     "1250"
+	            "FixedDistance" "1000"
+	            "TargetTeams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	            "TargetTypes"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	            "TargetFlags"   "DOTA_UNIT_TARGET_FLAG_NONE"
+	            "HasFrontalCone"    "1"
+	            "ProvidesVision" "0"
+	            
+	        }
 	    }
+	
+	
 	    
 	    // "OnChannelSucceeded"
 	    // {

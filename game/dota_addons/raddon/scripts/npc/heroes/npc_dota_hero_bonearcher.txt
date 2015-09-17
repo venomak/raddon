@@ -1,8 +1,8 @@
-"npc_dota_hero_sadist"
+"npc_dota_hero_bonearcher"
   {
 
     "AbilityLayout"     "6"
-    "override_hero"     "npc_dota_hero_queenofpain"
+    "override_hero"     "npc_dota_hero_clinkz"
     "SoundSet"          "0" 
     "Ability1"        "" 
     "Ability2"        "" 
